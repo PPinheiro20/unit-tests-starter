@@ -64,7 +64,7 @@ Diferente de `Produto` e `Cliente`, `Pedido` tem duas regras mais elaboradas:
 
 ## Parte 1 — PedidoService (unitario com mock)
 
-Arquivo: `api/__tests__/PedidoService.test.js`
+Arquivo: `api/__tests__/unit/PedidoService.test.js`
 
 ### buscarPorId(id)
 
@@ -100,7 +100,7 @@ Matchers sugeridos: `toHaveBeenCalledWith`, `not.toHaveBeenCalled`, `toEqual`, `
 
 ## Parte 2 — API /pedidos (integracao com supertest)
 
-Arquivo: `api/__tests__/pedidos.integration.test.js`
+Arquivo: `api/__tests__/integration/pedidos.integration.test.js`
 
 ### GET /pedidos/:id
 

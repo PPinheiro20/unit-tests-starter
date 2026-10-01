@@ -38,7 +38,7 @@ Isso significa que, ao testar `criar`, existem **tres** caminhos de erro possive
 
 ## Parte 1 — ClienteService (unitario com mock)
 
-Arquivo: `api/__tests__/ClienteService.test.js`
+Arquivo: `api/__tests__/unit/ClienteService.test.js`
 
 ### buscarPorId(id)
 
@@ -70,7 +70,7 @@ Matchers sugeridos: `toHaveBeenCalledWith`, `not.toHaveBeenCalled`, `toEqual`, `
 
 ## Parte 2 — API /clientes (integracao com supertest)
 
-Arquivo: `api/__tests__/clientes.integration.test.js`
+Arquivo: `api/__tests__/integration/clientes.integration.test.js`
 
 ### GET /clientes/:id
 

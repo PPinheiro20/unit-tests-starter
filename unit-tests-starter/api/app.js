@@ -20,6 +20,15 @@ function createApp() {
   const app = express();
   app.use(express.json());
 
+  // CORS: libera o acesso dos front-ends, que rodam em outra porta (outra origem).
+  app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    if (req.method === "OPTIONS") return res.sendStatus(204);
+    next();
+  });
+
   const repository = new ProdutoRepository();
   const service = new ProdutoService(repository);
   const controller = new ProdutoController(service);
