@@ -7,7 +7,8 @@
     "test:unit": "jest api/__tests__/unit",
     "test:integration": "jest api/__tests__/integration",
     "api": "node api/server.js",
-    "dev": "concurrently -n api,web \"npm run api\" \"npm run dev --prefix web\""
+    "dev": "concurrently -n api,web \"npm run api\" \"npm run dev --prefix web\"",
+    "api:e2e": "node api/server.js --e2e"
   },
   "dependencies": {
     "express": "^5.2.1"
